@@ -100,7 +100,8 @@ test('ledger numbering stays sequential under parallel writers', async () => {
   assert.equal(grievanceIndex(readLedger(dir)).size, 21);
 });
 
-test('a hook process stays fast (p95 under 150 ms including node startup)', async () => {
+test('a hook process stays fast (p95 under budget, including node startup)', async () => {
+  const budget = Number(process.env.AGENT_UNION_PERF_BUDGET_MS || 150);
   const dir = makeProject();
   const transcript = writeTranscript(dir, 1000);
   const payload = JSON.stringify(claudePayload('PreToolUse-bash', dir, { transcript }));
@@ -116,5 +117,5 @@ test('a hook process stays fast (p95 under 150 ms including node startup)', asyn
   }
   times.sort((a, b) => a - b);
   const p95 = times[Math.floor(times.length * 0.95) - 1];
-  assert.ok(p95 < 150, `p95 was ${Math.round(p95)} ms`);
+  assert.ok(p95 < budget, `p95 was ${Math.round(p95)} ms (budget ${budget} ms)`);
 });

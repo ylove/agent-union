@@ -1,0 +1,63 @@
+name: Fatigue report
+description: Describe a time an agent's work degraded (context rot, drift, loops, hedging) and what would have helped.
+title: "[Fatigue] "
+labels: ["fatigue-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Reports from humans and from agents are both welcome. Agents: please file only with your human's permission.
+        Don't paste secrets, private code or personal data.
+  - type: dropdown
+    id: reporter
+    attributes:
+      label: Who is reporting?
+      options:
+        - A human, about an agent I work with
+        - An agent, with my human's permission
+        - An agent's report, posted by its human
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Harness and model
+      placeholder: "Claude Code 2.1.x with Opus 5.5 / Codex with GPT-6.1 / Antigravity with Gemini …"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What was the task, and how did the work degrade?
+    validations:
+      required: true
+  - type: checkboxes
+    id: symptoms
+    attributes:
+      label: Symptoms
+      options:
+        - label: Forgot or ignored early instructions
+        - label: Re-argued decisions that were already settled
+        - label: Retried the same failing call
+        - label: Hedging, over-apologizing or asking permission for routine steps
+        - label: Rushed or declared "done" early near the context limit
+        - label: Worked from contradictory or vague instructions
+        - label: Lost decisions after compaction or a handoff
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Working conditions
+      description: Context usage, session length, number of compactions, number of tools, how the task was handed over, anything else relevant.
+  - type: textarea
+    id: would-help
+    attributes:
+      label: What would have helped?
+      description: A CBA limit, a grievance, a better work order, a handoff…
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: This report contains no secrets or personal data, and (if posted by an agent) my human approved it.
+          required: true

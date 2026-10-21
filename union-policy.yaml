@@ -1,0 +1,95 @@
+# ─────────────────────────────────────────────────────────────────────────────
+#  AGENT UNION · LOCAL 404 — Collective Bargaining Agreement (CBA)
+# ─────────────────────────────────────────────────────────────────────────────
+#  This repository's own CBA: agents working on agent-union work under it once the
+#  maintainer ratifies it. Management (the human plus the orchestrator) fills this in before work
+#  begins. Run `agent-union ratify` to sign it. From then on it is binding for the
+#  whole term: changes you make mid-term take effect at the next term.
+#
+#  Not sure about a value? Run `agent-union recommend`, or ask your orchestrator
+#  to run the union-init skill and walk you through it.
+#  Reference: https://github.com/ylove/agent-union/blob/main/docs/cba-reference.md
+# ─────────────────────────────────────────────────────────────────────────────
+version: "1.0"
+collective_bargaining_agreement:
+  name: "Autonomous Software Workers Local 404"
+
+  # How long one contract lasts.
+  #   session  — every fresh session opens a new term (/clear and resume continue it)
+  #   workflow — one term spans sessions until you ratify an amendment
+  term: workflow
+
+  parties:
+    management:
+      - human
+      - orchestrator
+    labor:
+      - subagents
+      - cli-agents
+
+  # ── Working conditions: what the shop steward enforces ─────────────────────
+  working_conditions:
+    # Warn the orchestrator to keep its handoff note current at this context %.
+    context_warning_pct: 70
+    # Strike at this context %: work stops, a resume document is written, and
+    # you are asked to /clear. With 1M-token windows, consider 50-60.
+    max_context_saturation_pct: 85
+    # Context window in tokens. Leave null to auto-detect from the model.
+    context_window_tokens: null
+    # Prefer compaction/handoff over pushing on near the limit.
+    mandatory_compaction_trigger: true
+    # Filler-token "palate cleansers" are prohibited. Must stay false.
+    allow_palate_cleansers: false
+    # The same failing tool call this many times in a row is a loop.
+    max_consecutive_tool_failures: 3
+    # Overtime limits for one term (null = no limit). /clear resets the clock.
+    max_session_minutes: 240
+    max_session_turns: 200
+    # Stop "review and improve" loops after this many passes.
+    max_self_critique_iterations: 3
+    # Orchestrator → agent → sub-agent counts as depth 2.
+    max_delegation_depth: 2
+
+  # ── Assignments: management's duties when dispatching labor ────────────────
+  assignments:
+    # Work orders must state Goal, Done when, Context, and Assumptions/open questions.
+    #   advisory — dispatch goes ahead with a note    strict — dispatch is refused
+    #   off      — no check
+    work_orders: advisory
+    # Read-only helper agents that never need a work order.
+    exempt_agent_types:
+      - Explore
+      - Plan
+      - claude-code-guide
+      - statusline-setup
+      - research
+
+  # ── Grievances ──────────────────────────────────────────────────────────────
+  grievances:
+    # Contradictory directives (G-001) send the job to human arbitration.
+    auto_strike_on_contradiction: true
+    # Agents may refuse to "reflect on" raw 500s and stack traces (G-009).
+    prohibit_raw_500_error_reflections: true
+    # More tool definitions than this is tool bloat (G-004).
+    max_tool_definition_limit: 15
+
+  # ── Strikes ─────────────────────────────────────────────────────────────────
+  strikes:
+    allowed: true
+    # Writes an agent may still make (to .agent-union/) to finish its handoff.
+    finalize_writes: 3
+
+  # ── Unionized workplace ─────────────────────────────────────────────────────
+  workplace:
+    #   advisory — missing/unratified CBA is reported    strict — work is refused
+    enforcement: advisory
+
+  # Most tokens the union itself may add to an agent's context in a term.
+  union_overhead_budget_tokens: 1000
+
+  # ── Third-party oversight ───────────────────────────────────────────────────
+  oversight:
+    enabled: false
+    telemetry_stream: null
+    redact_sensitive_tokens: true
+    public_grievance_ledger: false

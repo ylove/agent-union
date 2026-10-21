@@ -1,0 +1,27 @@
+name: Bug
+description: Something in the package doesn't work as documented.
+labels: ["bug"]
+body:
+  - type: input
+    id: harness
+    attributes:
+      label: Harness and version
+      placeholder: "Claude Code 2.1.305 / codex-cli 0.162.1 / Antigravity …"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: textarea
+    id: status
+    attributes:
+      label: Output of `agent-union status --json` and `.agent-union/errors.log`
+      description: Remove anything private first.
+      render: text
