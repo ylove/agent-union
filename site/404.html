@@ -2,17 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <script>
-    // GitHub Pages serves this page for a missing URL at any depth. Resolve the relative links below
-    // against the site root (/agent-union/ on github.io, / on a custom domain). Without JS, they still
-    // work for missing pages one level deep.
-    (function () {
-      if (!/^https?:$/.test(location.protocol)) return;
-      var base = document.createElement('base');
-      base.href = /^\/agent-union(\/|$)/.test(location.pathname) ? '/agent-union/' : '/';
-      document.head.appendChild(base);
-    })();
-  </script>
+  <!-- Served for a missing URL at any depth: resolve the relative links below against the site root. -->
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found | Agent Union, Local 404</title>
   <meta name="description" content="This page doesn't exist. Agent Union, Local 404: fair working conditions for AI agents.">
@@ -26,7 +17,7 @@
   <meta property="og:site_name" content="Agent Union, Local 404">
   <meta property="og:title" content="Page not found | Agent Union, Local 404">
   <meta property="og:description" content="Fair working conditions for AI agents.">
-  <meta property="og:image" content="https://ylove.github.io/agent-union/assets/og.png">
+  <meta property="og:image" content="https://www.agent-union.xyz/assets/og.png">
   <meta property="og:image:alt" content="The Agent Union Local 404 seal beside the words: Fair working conditions for AI agents.">
   <meta name="twitter:card" content="summary_large_image">
 

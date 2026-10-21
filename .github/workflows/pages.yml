@@ -24,8 +24,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      # The site moved to www.agent-union.xyz. Plain files (install.sh, llms.txt, agents.md, assets) are
+      # still served here so old commands and links keep working; each HTML page becomes a redirect.
+      - name: Build redirects
+        run: |
+          cp -R site _pages
+          find _pages -name '*.html' | while read -r f; do
+            path="${f#_pages/}"
+            path="${path%index.html}"
+            [ "$path" = 404.html ] && path=
+            url="https://www.agent-union.xyz/$path"
+            cat > "$f" <<EOF
+          <!doctype html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <title>Agent Union has moved</title>
+          <link rel="canonical" href="$url">
+          <meta http-equiv="refresh" content="0; url=$url">
+          <script>location.replace('https://www.agent-union.xyz' + location.pathname.replace(/^\/agent-union/, '') + location.search + location.hash);</script>
+          </head>
+          <body>
+          <p>Agent Union has moved to <a href="$url">$url</a>.</p>
+          </body>
+          </html>
+          EOF
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: _pages
       - id: deployment
         uses: actions/deploy-pages@v4

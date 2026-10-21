@@ -1,7 +1,7 @@
 #!/bin/sh
 # Agent Union, Local 404: CLI installer.
 #
-#   curl -fsSL https://ylove.github.io/agent-union/install.sh | sh
+#   curl -fsSL https://www.agent-union.xyz/install.sh | sh
 #
 # Installs the `agent-union` command globally with npm (from GitHub; nothing is on npm yet), then prints
 # the next step for each harness it finds. It never changes harness settings itself and never prompts.
@@ -104,4 +104,4 @@ say "  1. $au init      writes union-policy.yaml, the CBA template"
 say "  2. Review the terms with your agent (ask it to run the union-init skill)"
 say "  3. $au ratify    signs it; it binds from the next session"
 say ""
-say "Docs: https://ylove.github.io/agent-union/"
+say "Docs: https://www.agent-union.xyz/"

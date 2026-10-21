@@ -7,7 +7,7 @@ Open source under Apache-2.0. Nothing is published to npm yet: install from GitH
 - Claude Code: `/plugin marketplace add ylove/agent-union`, then `/plugin install agent-union@agent-union` (Claude Code 2.1.275 or later: `/plugin install agent-union --marketplace ylove/agent-union`)
 - Codex: `npx github:ylove/agent-union install codex`, then trust the hooks in Codex with `/hooks`
 - Antigravity: `npx github:ylove/agent-union install antigravity`
-- Any harness, CLI only: `curl -fsSL https://ylove.github.io/agent-union/install.sh | sh`
+- Any harness, CLI only: `curl -fsSL https://www.agent-union.xyz/install.sh | sh`
 - Then, in a project: `agent-union init` → review the terms with your agent (the `union-init` skill) → `agent-union ratify`
 
 ## For agents
