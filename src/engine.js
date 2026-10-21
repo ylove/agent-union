@@ -442,6 +442,7 @@ function onPreTool(ev, d, term, now) {
 
   tools.calls += 1;
   const s = sig(ev.toolName, ev.toolInput);
+  tools.last_sig = s;
   const wc = term.terms.working_conditions;
   if (tools.streak >= wc.max_consecutive_tool_failures && s === tools.last_failed_sig) {
     d.deny = `⚒ Steward (G-002): this exact call has already failed ${tools.streak} times in a row. Don't retry it: read the error, change the approach, or ask for help.`;
@@ -528,7 +529,8 @@ function onToolFailure(ev, d, term) {
   const key = ev.agentId || ev.sessionId || 'main';
   term.tools ??= {};
   const tools = (term.tools[key] ??= { calls: 0, streak: 0, last_fail_index: -1, last_failed_sig: null });
-  const s = sig(ev.toolName, ev.toolInput);
+  // Some harnesses (Antigravity) don't repeat the tool call in PostToolUse: it was the last one we saw.
+  const s = ev.toolName ? sig(ev.toolName, ev.toolInput) : tools.last_sig ?? 'unknown';
   tools.streak = tools.last_fail_index === tools.calls - 1 && tools.last_failed_sig === s ? tools.streak + 1 : 1;
   tools.last_fail_index = tools.calls;
   tools.last_failed_sig = s;
