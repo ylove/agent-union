@@ -433,10 +433,13 @@ function onPreTool(ev, d, term, now) {
     return;
   }
 
-  // Labor strikes: one worker over its limit hands off and stops.
+  // Labor strikes: one worker over its limit hands off and stops. Subagents are keyed by agent id,
+  // CLI-launched labor sessions by session id.
   term.labor_strikes ??= {};
-  if (ev.agentId && term.labor_strikes[ev.agentId]) {
-    d.deny = term.labor_strikes[ev.agentId];
+  const isLabor = Boolean(ev.agentId) || ev.role === 'labor';
+  const laborKey = ev.agentId || ev.sessionId;
+  if (isLabor && term.labor_strikes[laborKey]) {
+    d.deny = term.labor_strikes[laborKey];
     return;
   }
 
@@ -453,10 +456,10 @@ function onPreTool(ev, d, term, now) {
     const ctx = checkContext(ev, d, term, now);
     if (ctx?.over && term.terms.strikes.allowed) {
       const reason = `Context is at ${ctx.pctText}, over the CBA's ${wc.max_context_saturation_pct}%.`;
-      if (ev.agentId || ev.role === 'labor') {
+      if (isLabor) {
         const g = fileGrievance(ev.projectDir, { code: 'G-003', detail: reason, filedBy: { role: 'steward', agent_id: ev.agentId, agent_type: ev.agentType }, termId: term.term_id, source: 'steward' }, { locked: true });
         const msg = `🛑 UNION STRIKE — Grievance #${g.n} (G-003): your ${reason.charAt(0).toLowerCase()}${reason.slice(1)} Stop using tools and reply now with your handoff (Completed / Current state / Next actions) so management can dispatch a fresh worker.`;
-        if (ev.agentId) term.labor_strikes[ev.agentId] = msg;
+        if (laborKey) term.labor_strikes[laborKey] = msg;
         d.deny = msg;
         return;
       }

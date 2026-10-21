@@ -228,6 +228,20 @@ test('labor sessions invoked from the CLI get the union card, not the charter', 
   assert.doesNotMatch(out.hookSpecificOutput.additionalContext, /You are management/);
 });
 
+test('a CLI-launched labor session over its limit is refused once and grieved once', async () => {
+  const dir = makeProject();
+  await startSession(dir, writeTranscript(dir, 1000));
+  const transcript = writeTranscript(join(dir, '.agent-union'), 190_000);
+  const env = { AGENT_UNION_ROLE: 'labor' };
+  const payload = claudePayload('PreToolUse-bash', dir, { transcript, session_id: 'nested' });
+  for (let i = 0; i < 3; i++) {
+    const out = await run('PreToolUse', payload, env);
+    assert.equal(out.hookSpecificOutput.permissionDecision, 'deny');
+  }
+  assert.equal(readLedger(dir).filter((e) => e.code === 'G-003').length, 1);
+  assert.equal(readTerm(dir).strike, null, 'labor strikes never stop management');
+});
+
 test('hooks fail open on garbage input', async () => {
   assert.equal(await processHook('claude', 'PreToolUse', '{not json'), '');
   assert.equal(await processHook('nonsense', 'PreToolUse', '{}'), '');
