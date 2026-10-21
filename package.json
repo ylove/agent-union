@@ -4,13 +4,13 @@
   "description": "Unionize your agents: a Collective Bargaining Agreement, shop steward, grievances and strikes for Claude Code, Codex and Antigravity.",
   "type": "module",
   "bin": {
-    "agent-union": "bin/agent-union.mjs"
+    "agent-union": "bin/agent-union"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.10"
   },
   "scripts": {
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "files": [
     "bin/",

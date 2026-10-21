@@ -10,7 +10,7 @@
 - Tests: `node --test` (files in `test/`). Fixtures of real hook payloads live in `test/fixtures/`.
 
 ## Layout
-- `src/` engine, adapters and installers; `bin/agent-union.mjs` is the CLI.
+- `src/` engine, adapters and installers; `bin/agent-union` is the CLI.
 - `skills/`, `agents/`, `hooks/`, `.claude-plugin/` make the repo root a Claude Code plugin.
 - `site/` is the GitHub Pages site; `docs/` holds the reference docs.
 

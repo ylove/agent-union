@@ -1,5 +1,13 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { handle } from './engine.js';
+import { findProjectDir, logError } from './state.js';
+
+const ADAPTERS = {
+  claude: () => import('./adapters/claude.js'),
+  codex: () => import('./adapters/codex.js'),
+  antigravity: () => import('./adapters/antigravity.js'),
+};
 
 export async function readStdin() {
   if (process.stdin.isTTY) return '';
@@ -18,12 +26,32 @@ function record(harness, event, raw) {
   writeFileSync(join(dir, `${harness}-${event}-${stamp}-${rand}.json`), raw);
 }
 
-export async function runHook([harness, event]) {
+// Runs one hook event end to end. Never throws and always exits 0: a broken union must not stop work.
+export async function processHook(harness, eventName, raw, env = process.env) {
+  let projectDir = null;
+  try {
+    const load = ADAPTERS[harness];
+    if (!load) return '';
+    const payload = raw.trim() ? JSON.parse(raw) : {};
+    const adapter = await load();
+    const ev = adapter.normalize(payload, eventName, env);
+    projectDir = ev.projectDir;
+    const decision = handle(ev);
+    return adapter.render(decision, ev.event, ev);
+  } catch (err) {
+    logError(projectDir || findProjectDir(process.cwd()), err);
+    return '';
+  }
+}
+
+export async function runHook([harness, eventName]) {
   try {
     const raw = await readStdin();
-    record(harness, event, raw);
+    record(harness, eventName, raw);
+    const out = await processHook(harness, eventName, raw);
+    if (out) process.stdout.write(out);
   } catch {
-    // Hooks fail open.
+    // Fail open.
   }
   return 0;
 }

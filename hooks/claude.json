@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude SessionStart",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude SessionStart",
             "timeout": 10
           }
         ]
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude UserPromptSubmit",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude UserPromptSubmit",
             "timeout": 10
           }
         ]
@@ -29,7 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude PreToolUse",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude PreToolUse",
             "timeout": 10
           }
         ]
@@ -41,7 +41,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude PostToolUseFailure",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude PostToolUseFailure",
             "timeout": 10
           }
         ]
@@ -52,7 +52,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude SubagentStart",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude SubagentStart",
             "timeout": 10
           }
         ]
@@ -63,7 +63,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude SubagentStop",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude SubagentStop",
             "timeout": 10
           }
         ]
@@ -74,7 +74,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude PreCompact",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude PreCompact",
             "timeout": 10
           }
         ]
@@ -85,7 +85,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude Stop",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude Stop",
             "timeout": 10
           }
         ]
@@ -96,7 +96,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union.mjs\" hook claude SessionEnd",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/agent-union\" hook claude SessionEnd",
             "timeout": 3
           }
         ]
