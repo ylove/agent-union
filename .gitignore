@@ -1,0 +1,12 @@
+# Local Claude Code settings (per-machine permissions)
+.claude/settings.local.json
+
+# Agent Union runtime state: keep the ratification record, ignore the rest
+# (RESUME.md and the ledger can quote prompts).
+.agent-union/*
+!.agent-union/ratification.json
+
+node_modules/
+*.tgz
+.DS_Store
+test/.tmp/

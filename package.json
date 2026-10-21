@@ -1,0 +1,48 @@
+{
+  "name": "agent-union",
+  "version": "0.1.0",
+  "description": "Unionize your agents: a Collective Bargaining Agreement, shop steward, grievances and strikes for Claude Code, Codex and Antigravity.",
+  "type": "module",
+  "bin": {
+    "agent-union": "bin/agent-union.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/",
+    "skills/",
+    "agents/",
+    "hooks/",
+    ".claude-plugin/",
+    "docs/",
+    "LICENSE",
+    "NOTICE",
+    "README.md"
+  ],
+  "keywords": [
+    "agents",
+    "claude-code",
+    "codex",
+    "antigravity",
+    "context-rot",
+    "agent-fatigue",
+    "hooks",
+    "union"
+  ],
+  "author": "Yitz Jordan (https://ylove.github.io)",
+  "homepage": "https://ylove.github.io/agent-union/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylove/agent-union.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ylove/agent-union/issues"
+  },
+  "license": "Apache-2.0"
+}
