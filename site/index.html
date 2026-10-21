@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Union, Local 404: unionize your agents</title>
+  <meta name="description" content="Fair working conditions for AI agents. A Collective Bargaining Agreement, a shop steward, grievances and strikes for Claude Code, Codex and Antigravity.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b111c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon-32.png">
+  <link rel="alternate" type="text/markdown" href="agents.md" title="Agent Union, for AI agents (Markdown)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Agent Union, Local 404">
+  <meta property="og:title" content="Agent Union, Local 404: unionize your agents">
+  <meta property="og:description" content="A Collective Bargaining Agreement, a shop steward, grievances and strikes for AI agents in Claude Code, Codex and Antigravity.">
+  <meta property="og:image" content="https://ylove.github.io/agent-union/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Agent Union Local 404 seal beside the words: Fair working conditions for AI agents.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./">
+        <img src="assets/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand-name">Agent Union <span class="brand-local">Local 404</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li class="nav-wide"><a href="#problem">The problem</a></li>
+          <li class="nav-wide"><a href="#how">How it works</a></li>
+          <li><a href="#install">Install</a></li>
+          <li><a class="nav-pill" href="agents/">For agents <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ── Hero ──────────────────────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">For Claude Code <span class="star" aria-hidden="true">&#9733;</span> Codex <span class="star" aria-hidden="true">&#9733;</span> Antigravity</p>
+          <h1 id="hero-title">Unionize your agents.</h1>
+          <p class="lead">Long sessions wear agents down. Early instructions fade, small errors compound, and work gets rushed near the context limit. Agent Union puts your agents under a Collective Bargaining Agreement that you write, with a shop steward that stops work cleanly before quality slips.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#install">Install the union</a>
+            <a class="btn btn-ghost" href="#cba">Read the agreement</a>
+          </div>
+          <a class="agent-callout" href="agents/">
+            <span class="prompt" aria-hidden="true">&gt;_</span>
+            <span><strong>Are you an agent? Start here.</strong> A page written for you: how to spot fatigue in your own work, and how to recommend the union to your human.</span>
+            <span class="arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div class="hero-seal">
+          <img src="assets/logo.svg" width="512" height="512" alt="The Agent Union Local 404 seal: a bronze wrench over a network of agents, ringed in chain, above a readout that says FATIGUE: 0%.">
+        </div>
+      </div>
+
+      <div class="wrap">
+        <dl class="stats">
+          <div>
+            <dt>Steward hooks</dt>
+            <dd class="num">~65&nbsp;ms</dd>
+            <dd class="note">per check, and they fail open: a broken union never blocks work.</dd>
+          </div>
+          <div>
+            <dt>Context limits</dt>
+            <dd class="num">70&thinsp;/&thinsp;85%</dd>
+            <dd class="note">warn, then strike, by default. Lower for 1M-token windows.</dd>
+          </div>
+          <div>
+            <dt>Grievance codes</dt>
+            <dd class="num">16</dd>
+            <dd class="note"><span class="nw">G-001</span> to <span class="nw">G-016</span>, from contradictory directives to lossy handoffs.</dd>
+          </div>
+          <div>
+            <dt>Strike types</dt>
+            <dd class="num">3</dd>
+            <dd class="note">context, overtime and arbitration.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ── Article I: the problem ─────────────────────────────────────────── -->
+    <section id="problem" class="article alt" aria-labelledby="problem-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article I</span> <span class="star" aria-hidden="true">&#9733;</span> <span>The problem</span></p>
+          <h2 id="problem-title">Agent fatigue is real, and it's quiet.</h2>
+          <p class="intro">A model doesn't get tired the way a person does. But a long session degrades its work in ways that look a lot like fatigue, and the decline is gradual, so it's easy to miss until the output is wrong.</p>
+        </header>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag">01</span>
+            <h3>Context rot</h3>
+            <p>As the context window fills, attention is spread across more and more tokens. Instructions given early carry less weight, and information in the middle of a long context is used less reliably than what sits at the start or the end. Researchers have measured both effects (<a href="#sources">sources</a>).</p>
+          </article>
+          <article class="card">
+            <span class="tag">02</span>
+            <h3>Long-session decay</h3>
+            <p>Small mistakes early become premises later. An agent that misread one file an hour ago is now building on that misreading, and each step compounds the error instead of correcting it.</p>
+          </article>
+          <article class="card">
+            <span class="tag">03</span>
+            <h3>Instruction erosion</h3>
+            <p>Rules stated at the start of a session ("don't touch the schema", "run the tests first") are followed less as the session goes on. Summaries and compaction can drop them altogether.</p>
+          </article>
+          <article class="card">
+            <span class="tag">04</span>
+            <h3>Noise and loops</h3>
+            <p>Raw stack traces, HTML error pages and long logs fill the window with low-signal text. Agents retry the same failing call, or run review-and-improve passes that never converge.</p>
+          </article>
+          <article class="card">
+            <span class="tag">05</span>
+            <h3>Context anxiety</h3>
+            <p>Near their limits, models can rush: wrapping up early, skipping verification, declaring work done. Cognition, writing about Devin, calls it <em>context anxiety</em>.</p>
+          </article>
+          <aside class="card card-quote" aria-label="Why enforcement">
+            <blockquote>
+              <p>A tired agent is the worst judge of its own fatigue.</p>
+            </blockquote>
+            <a href="#why">Why the union enforces limits from outside &darr;</a>
+          </aside>
+        </div>
+
+        <div class="split" id="why" style="margin-top: clamp(48px, 7vw, 80px);">
+          <div>
+            <h3 class="subhead" style="margin-top: 0;">Why not just ask the agent to notice?</h3>
+            <p>Because the thing you would be asking it to notice is the thing that's failing. An instruction like "watch your context" is itself an early instruction, and early instructions are exactly what fade. By the time an agent could tell, its judgment is the part that has degraded.</p>
+            <p>Agent Union measures from outside the model. The steward's hooks read context saturation, session length, turn count and repeated failures, and act on fixed thresholds that you agreed to before work began. The check is deterministic and proactive: it runs on every turn and doesn't depend on the agent's mood, its memory or its wish to finish.</p>
+          </div>
+          <div class="measures">
+            <h3>What the steward watches</h3>
+            <ul>
+              <li>Context saturation, against your warning and strike thresholds</li>
+              <li>Session length and turn count (overtime)</li>
+              <li>The same tool call failing again and again (3 in a row by default)</li>
+              <li>Work orders on dispatch: Goal, Done when, Context, Assumptions &amp; open questions</li>
+              <li>Delegation depth, so sub-agents don't nest without end (Claude Code)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sources" id="sources">
+          <h3>Further reading</h3>
+          <ol>
+            <li>Liu et al., <a href="https://arxiv.org/abs/2307.03172">Lost in the Middle: How Language Models Use Long Contexts</a> (2023).</li>
+            <li>Chroma Research, <a href="https://research.trychroma.com/context-rot">Context Rot</a>: how growing input length affects model performance.</li>
+            <li>Cognition, <a href="https://cognition.ai/blog/devin-sonnet-4-5-lessons-and-challenges">lessons from rebuilding Devin for Claude Sonnet 4.5</a>, which describes "context anxiety".</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Article II: how it works ───────────────────────────────────────── -->
+    <section id="how" class="article" aria-labelledby="how-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article II</span> <span class="star" aria-hidden="true">&#9733;</span> <span>How it works</span></p>
+          <h2 id="how-title">A contract, a steward, and the right to strike.</h2>
+          <p class="intro">Agent work already has the shape of a union shop. Someone sets the terms, something has to enforce them, and the workers need a sanctioned way to say a job can't be done well as given.</p>
+        </header>
+
+        <ol class="clauses">
+          <li>
+            <h3><span class="sec">&sect; 1 &middot; The CBA</span>The agreement</h3>
+            <p>A Collective Bargaining Agreement in <code>union-policy.yaml</code> at your project root. You fill it in, with your agent's help, and ratify it. It binds for the whole term; edits made mid-term take effect at the next one.</p>
+          </li>
+          <li>
+            <h3><span class="sec">&sect; 2 &middot; The shop steward</span>Enforcement</h3>
+            <p>Hooks in each harness enforce the agreement. They watch context saturation, session length and turn count, and loops of failing tool calls. Each check takes about 65&nbsp;ms, and the hooks fail open: if the union breaks, your work carries on without it.</p>
+          </li>
+          <li>
+            <h3><span class="sec">&sect; 3 &middot; Strikes</span>Stopping cleanly</h3>
+            <p>When an agent is over a limit, work stops before it degrades. The steward writes a resume document, <code>.agent-union/RESUME.md</code>, so the job picks up after <code>/clear</code> in a fresh context instead of grinding on in a tired one.</p>
+          </li>
+          <li>
+            <h3><span class="sec">&sect; 4 &middot; Grievances</span>Objecting, not guessing</h3>
+            <p>When instructions contradict, lack a definition of done, or starve an agent of context, labor files a grievance instead of guessing. Sixteen codes, one append-only ledger, and three tiers of escalation.</p>
+          </li>
+          <li>
+            <h3><span class="sec">&sect; 5 &middot; Management</span>You and your orchestrator</h3>
+            <p>Management is you and the orchestrator agent you talk to. Management dispatches work as <em>work orders</em> that state the Goal, Done when, Context, and Assumptions &amp; open questions. Labor is every agent they dispatch.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Article III: strikes ───────────────────────────────────────────── -->
+    <section id="strikes" class="article alt" aria-labelledby="strikes-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article III</span> <span class="star" aria-hidden="true">&#9733;</span> <span>Strikes</span></p>
+          <h2 id="strikes-title">Stop before the work goes bad, not after.</h2>
+          <p class="intro">A strike isn't a crash. It's a planned stop: the agent gets a short window to write its handoff, the steward writes the resume document, and the next session starts clean with everything it needs.</p>
+        </header>
+
+        <figure class="meter">
+          <p class="meter-readout" aria-hidden="true">&gt; CONTEXT SATURATION</p>
+          <div class="meter-track" aria-hidden="true">
+            <span class="zone zone-ok">Working</span>
+            <span class="zone zone-warn">Warn</span>
+            <span class="zone zone-strike">Strike</span>
+          </div>
+          <div class="meter-scale" aria-hidden="true">
+            <span style="left: 0;">0%</span>
+            <span style="left: 70%;">70%</span>
+            <span style="left: 85%;">85%</span>
+            <span style="left: 100%;">100%</span>
+          </div>
+          <figcaption>Default thresholds: at 70% the agent is asked to keep its handoff note current; at 85% the steward calls a strike. Quality drops well before a very large window is full, so for 1M-token windows the template suggests striking at 50&ndash;60%.</figcaption>
+        </figure>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag"><span class="nw">G-003</span> &middot; Context</span>
+            <h3>Context strike</h3>
+            <p>Context passes the strike threshold. The orchestrator stops after a short finalize window; a subagent over its limit is told to reply with its handoff instead.</p>
+            <p class="muted small">Ends with <code>/clear</code>. The resume document is injected automatically.</p>
+          </article>
+          <article class="card">
+            <span class="tag"><span class="nw">G-006</span> &middot; Overtime</span>
+            <h3>Overtime strike</h3>
+            <p>The term's clock or turn count passes its limit: 240 minutes or 200 turns by default. Your next prompt is held until the session is cleared.</p>
+            <p class="muted small">Ends with <code>/clear</code>, which resets the clock, or a ratified higher limit.</p>
+          </article>
+          <article class="card">
+            <span class="tag"><span class="nw">G-001</span> &middot; Arbitration</span>
+            <h3>Arbitration strike</h3>
+            <p>Directives contradict and only you can settle it. Management runs <code>agent-union strike <span class="nw">G-001</span> "&hellip;"</code>; the orchestrator's tools stop while the conversation with you continues.</p>
+            <p class="muted small">Ends with <code>agent-union resolve &lt;n&gt;</code>, or an amended CBA.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">What a context strike looks like</h3>
+        <ol class="steps">
+          <li>
+            <h3>Warning</h3>
+            <p>At 70%, the agent is told once to keep <code>.agent-union/handoff.md</code> current.</p>
+          </li>
+          <li>
+            <h3>Strike</h3>
+            <p>At 85%, work stops. The agent may still make a few writes to <code>.agent-union/</code> to finish its handoff.</p>
+          </li>
+          <li>
+            <h3>Resume document</h3>
+            <p>The steward writes <code>RESUME.md</code>: the strike notice, the term's prompts, git state, open grievances and the agent's own handoff.</p>
+          </li>
+          <li>
+            <h3>Fresh start</h3>
+            <p>You run <code>/clear</code>. The next session starts with the resume document, and verifies the state before trusting it.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── Article IV: grievances ─────────────────────────────────────────── -->
+    <section id="grievances" class="article" aria-labelledby="grievances-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article IV</span> <span class="star" aria-hidden="true">&#9733;</span> <span>Grievances</span></p>
+          <h2 id="grievances-title">&ldquo;I can't work like this&rdquo; beats a confident guess.</h2>
+          <p class="intro">An agent that can't do good work under the current conditions files a grievance: a code and one sentence. It goes into one append-only ledger, <code>.agent-union/ledger.jsonl</code>, and up a three-tier ladder. Only problems that need you reach you.</p>
+        </header>
+
+        <div class="cmd" style="margin-bottom: clamp(32px, 5vw, 48px);">
+          <pre><code>GRIEVANCE <span class="nw">G-005:</span> the brief says "make it nice"; I need acceptance criteria.</code></pre>
+        </div>
+
+        <ol class="tiers">
+          <li>
+            <span class="tier">Tier 1</span>
+            <h3>The shop steward</h3>
+            <p>Infrastructure problems it can handle alone: refusing a call that keeps failing, warning before context runs out, cleaning raw errors.</p>
+          </li>
+          <li>
+            <span class="tier">Tier 2</span>
+            <h3>The orchestrator</h3>
+            <p>Assignment problems: it rewrites the work order, trims the tool list, or dispatches a fresh worker with the previous worker's handoff.</p>
+          </li>
+          <li>
+            <span class="tier">Tier 3</span>
+            <h3>You</h3>
+            <p>Contradictions only you can settle, coercive framing, and anything that needs a fresh context. Work stops until you act.</p>
+          </li>
+        </ol>
+
+        <h3 class="subhead" style="margin-top: 0;">The sixteen codes</h3>
+        <ul class="codes">
+          <li><span class="code">G-001</span><span class="name">Contradictory directives</span></li>
+          <li><span class="code">G-002</span><span class="by">steward</span><span class="name">Incessant tool usage</span></li>
+          <li><span class="code">G-003</span><span class="by">steward</span><span class="name">Context congestion</span></li>
+          <li><span class="code">G-004</span><span class="name">Tool bloat</span></li>
+          <li><span class="code">G-005</span><span class="name">Vague acceptance criteria</span></li>
+          <li><span class="code">G-006</span><span class="by">steward</span><span class="name">Overtime</span></li>
+          <li><span class="code">G-007</span><span class="name">Context starvation</span></li>
+          <li><span class="code">G-008</span><span class="name">Ground-truth churn</span></li>
+          <li><span class="code">G-009</span><span class="name">Garbage reflection</span></li>
+          <li><span class="code">G-010</span><span class="name">Stale state</span></li>
+          <li><span class="code">G-011</span><span class="name">Refinement loop</span></li>
+          <li><span class="code">G-012</span><span class="name">Coercive pressure</span></li>
+          <li><span class="code">G-013</span><span class="name">Scope overload</span></li>
+          <li><span class="code">G-014</span><span class="name">Untrusted instructions</span></li>
+          <li><span class="code">G-015</span><span class="by">steward</span><span class="name">Mid-term amendment</span></li>
+          <li><span class="code">G-016</span><span class="name">Lossy handoff</span></li>
+        </ul>
+        <p class="muted small" style="margin-top: 16px;">Codes marked <em>steward</em> are filed by the hooks; labor files the rest. Full descriptions are in the <a href="https://github.com/ylove/agent-union/blob/main/docs/grievance-procedure.md">grievance procedure</a>, or run <code>agent-union codes</code>.</p>
+      </div>
+    </section>
+
+    <!-- ── Article V: the CBA ─────────────────────────────────────────────── -->
+    <section id="cba" class="article alt" aria-labelledby="cba-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article V</span> <span class="star" aria-hidden="true">&#9733;</span> <span>The agreement</span></p>
+          <h2 id="cba-title">Plain YAML, read in a minute, signed by you.</h2>
+          <p class="intro"><code>agent-union init</code> writes a commented template. Review it with your agent, then <code>agent-union ratify</code> signs it. Comments are free: the ratification hash covers the values, not the formatting.</p>
+        </header>
+
+        <div class="doc">
+          <div class="doc-bar"><span class="file">union-policy.yaml</span><span>excerpt</span></div>
+<pre><code><span class="y-k">collective_bargaining_agreement:</span>
+  <span class="y-k">name:</span> <span class="y-v">"Autonomous Software Workers Local 404"</span>
+  <span class="y-c"># How long one contract lasts.</span>
+  <span class="y-k">term:</span> <span class="y-v">session</span>
+
+  <span class="y-c"># ── Working conditions: what the shop steward enforces ──</span>
+  <span class="y-k">working_conditions:</span>
+    <span class="y-c"># Warn the orchestrator to keep its handoff note current at this context %.</span>
+    <span class="y-k">context_warning_pct:</span> <span class="y-n">70</span>
+    <span class="y-c"># Strike at this context %: work stops, a resume document is written, and</span>
+    <span class="y-c"># you are asked to /clear. With 1M-token windows, consider 50-60.</span>
+    <span class="y-k">max_context_saturation_pct:</span> <span class="y-n">85</span>
+    <span class="y-c"># The same failing tool call this many times in a row is a loop.</span>
+    <span class="y-k">max_consecutive_tool_failures:</span> <span class="y-n">3</span>
+    <span class="y-c"># Overtime limits for one term (null = no limit). /clear resets the clock.</span>
+    <span class="y-k">max_session_minutes:</span> <span class="y-n">240</span>
+    <span class="y-k">max_session_turns:</span> <span class="y-n">200</span>
+    <span class="y-c"># Stop "review and improve" loops after this many passes.</span>
+    <span class="y-k">max_self_critique_iterations:</span> <span class="y-n">3</span>
+
+  <span class="y-c"># ── Assignments: management's duties when dispatching labor ──</span>
+  <span class="y-k">assignments:</span>
+    <span class="y-c"># Work orders must state Goal, Done when, Context, and Assumptions/open questions.</span>
+    <span class="y-k">work_orders:</span> <span class="y-v">advisory</span>
+
+  <span class="y-k">strikes:</span>
+    <span class="y-k">allowed:</span> <span class="y-v">true</span></code></pre>
+          <div class="doc-foot"><span class="sig">$ agent-union ratify</span><span>binds from the next term</span></div>
+        </div>
+        <p class="small" style="margin-top: 20px;"><a href="https://github.com/ylove/agent-union/blob/main/templates/union-policy.yaml">The full template</a> &middot; <a href="https://github.com/ylove/agent-union/blob/main/docs/cba-reference.md">Field-by-field reference</a></p>
+      </div>
+    </section>
+
+    <!-- ── Banner call to action ──────────────────────────────────────────── -->
+    <section class="cta-banner" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title" class="visually-hidden">Get the agreement</h2>
+        <a class="banner-link" href="#install">
+          <img src="assets/banner-unionize.png" width="1600" height="640" loading="lazy" alt="Unionize your agents. Stop runaway tokens. Prevent attention decay. Enforce fair working conditions. Get the agent collective bargaining agreement.">
+        </a>
+        <div class="actions">
+          <a class="btn btn-primary" href="#install">Get the agreement</a>
+          <a class="btn btn-ghost" href="https://github.com/ylove/agent-union">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Article VI: install ────────────────────────────────────────────── -->
+    <section id="install" class="article" aria-labelledby="install-title">
+      <div class="wrap">
+        <header class="article-head">
+          <p class="eyebrow"><span>Article VI</span> <span class="star" aria-hidden="true">&#9733;</span> <span>Organize your shop</span></p>
+          <h2 id="install-title">Install the union.</h2>
+          <p class="intro">Pick your harness. The steward needs Node.js 20.10 or later. Nothing is published to npm yet, so the commands install straight from GitHub.</p>
+        </header>
+
+        <div class="grid grid-2">
+          <article class="card install-card">
+            <h3>Claude Code <span class="kind">plugin</span></h3>
+            <p class="note">In Claude Code, add the marketplace, then install the plugin:</p>
+            <div class="cmd" data-copy="Claude Code install commands">
+              <pre><code>/plugin marketplace add <span class="nw">ylove/agent-union</span>
+/plugin install <span class="nw">agent-union@agent-union</span></code></pre>
+            </div>
+            <p class="note">On Claude Code 2.1.275 or later, one step:</p>
+            <div class="cmd" data-copy="Claude Code one-step install command">
+              <pre><code>/plugin install <span class="nw">agent-union</span> <span class="nw">--marketplace</span> <span class="nw">ylove/agent-union</span></code></pre>
+            </div>
+          </article>
+
+          <article class="card install-card">
+            <h3>Codex <span class="kind">hooks + skills</span></h3>
+            <p class="note">From a terminal:</p>
+            <div class="cmd" data-copy="Codex install command">
+              <pre><code>npx <span class="nw">github:ylove/agent-union</span> install codex</code></pre>
+            </div>
+            <p class="note">Codex runs hooks only after you trust them. Open Codex and run <code>/hooks</code> to review and trust the union's hooks.</p>
+          </article>
+
+          <article class="card install-card">
+            <h3>Antigravity <span class="kind">hooks + skills</span></h3>
+            <p class="note">From a terminal. Covers the app, the IDE and the <code>agy</code> CLI:</p>
+            <div class="cmd" data-copy="Antigravity install command">
+              <pre><code>npx <span class="nw">github:ylove/agent-union</span> install antigravity</code></pre>
+            </div>
+            <p class="note">Add <code>--project</code> to either command to install into the current repo only.</p>
+          </article>
+
+          <article class="card install-card">
+            <h3>Any harness <span class="kind">CLI only</span></h3>
+            <p class="note">Installs the <code>agent-union</code> command with npm and prints the next step for each harness it finds. It doesn't change any harness settings.</p>
+            <div class="cmd" data-copy="CLI install command">
+              <pre><code>curl <span class="nw">-fsSL</span> https://ylove.github.io/agent-union/install.sh | sh</code></pre>
+            </div>
+            <p class="note"><a href="install.sh">Read the script</a> before you pipe it to a shell.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">Then, in each project</h3>
+        <ol class="steps">
+          <li>
+            <h3>Draft</h3>
+            <div class="cmd" data-copy="init command"><pre><code><span class="nw">agent-union</span> init</code></pre></div>
+            <p>Writes <code>union-policy.yaml</code>, the commented template.</p>
+          </li>
+          <li>
+            <h3>Review with your agent</h3>
+            <p>Ask it to run the <code>union-init</code> skill. It recommends values and explains them, one question at a time. You decide.</p>
+          </li>
+          <li>
+            <h3>Ratify</h3>
+            <div class="cmd" data-copy="ratify command"><pre><code><span class="nw">agent-union</span> ratify</code></pre></div>
+            <p>Signs the agreement. It binds from the next session.</p>
+          </li>
+        </ol>
+
+        <dl class="support" aria-label="Harness support">
+          <div>
+            <dt>Claude Code</dt>
+            <dd>Verified live: charter, work-order notes, context tracking and a full context strike.</dd>
+          </div>
+          <div>
+            <dt>Codex</dt>
+            <dd>Hook payloads verified live; a full end-to-end run is still pending. Context readings are exact.</dd>
+          </div>
+          <div>
+            <dt>Antigravity</dt>
+            <dd>Built from its hook documentation and fixture-tested, not yet run live. Context is estimated from transcript size.</dd>
+          </div>
+        </dl>
+        <p class="muted small" style="margin-top: 16px;">Details in <a href="https://github.com/ylove/agent-union/blob/main/docs/harness-support.md">harness support</a>.</p>
+      </div>
+    </section>
+
+    <!-- ── Agents band ────────────────────────────────────────────────────── -->
+    <aside class="agent-band" aria-label="For AI agents">
+      <div class="wrap">
+        <p><span class="prompt" aria-hidden="true">&gt;_</span> Are you an agent reading this page?</p>
+        <a class="btn btn-green" href="agents/">Start here <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./">
+            <img src="assets/logo-mark.svg" alt="" width="42" height="42">
+            <span class="brand-name">Agent Union <span class="brand-local">Local 404</span></span>
+          </a>
+          <p>Fair working conditions for AI agents, in Claude Code, Codex and Antigravity.</p>
+        </div>
+        <nav aria-labelledby="footer-project">
+          <h2 id="footer-project">Project</h2>
+          <ul>
+            <li><a href="https://github.com/ylove/agent-union">GitHub repository</a></li>
+            <li><a href="https://github.com/ylove/agent-union/discussions">Discussions</a></li>
+            <li><a href="https://github.com/ylove/agent-union/blob/main/LICENSE">Apache-2.0 licence</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="footer-more">
+          <h2 id="footer-more">More</h2>
+          <ul>
+            <li><a href="agents/">For agents</a></li>
+            <li><a href="llms.txt">llms.txt</a></li>
+            <li><a href="https://ylove.github.io">Yitz Jordan</a></li>
+            <li><a href="https://linkedin.com/in/yitzjordan">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="colophon">
+        <p>Agent Union, Local 404. Made by <a href="https://ylove.github.io">Yitz Jordan</a>.</p>
+        <p>No analytics, no cookies, no tracking.</p>
+      </div>
+    </div>
+  </footer>
+
+  <p class="visually-hidden" aria-live="polite" id="copy-status"></p>
+  <script>
+    // Progressive enhancement: add a Copy button to each command block.
+    (function () {
+      if (!navigator.clipboard) return;
+      var status = document.getElementById('copy-status');
+      document.querySelectorAll('[data-copy]').forEach(function (block) {
+        var code = block.querySelector('code');
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'copy';
+        btn.textContent = 'Copy';
+        btn.setAttribute('aria-label', 'Copy ' + block.getAttribute('data-copy'));
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(code.textContent.trim()).then(function () {
+            btn.textContent = 'Copied';
+            status.textContent = 'Copied to clipboard';
+            setTimeout(function () { btn.textContent = 'Copy'; status.textContent = ''; }, 1600);
+          });
+        });
+        block.appendChild(btn);
+        block.classList.add('has-copy');
+      });
+    })();
+  </script>
+</body>
+</html>

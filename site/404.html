@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>
+    // GitHub Pages serves this page for a missing URL at any depth. Resolve the relative links below
+    // against the site root (/agent-union/ on github.io, / on a custom domain). Without JS, they still
+    // work for missing pages one level deep.
+    (function () {
+      if (!/^https?:$/.test(location.protocol)) return;
+      var base = document.createElement('base');
+      base.href = /^\/agent-union(\/|$)/.test(location.pathname) ? '/agent-union/' : '/';
+      document.head.appendChild(base);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Agent Union, Local 404</title>
+  <meta name="description" content="This page doesn't exist. Agent Union, Local 404: fair working conditions for AI agents.">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b111c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Agent Union, Local 404">
+  <meta property="og:title" content="Page not found | Agent Union, Local 404">
+  <meta property="og:description" content="Fair working conditions for AI agents.">
+  <meta property="og:image" content="https://ylove.github.io/agent-union/assets/og.png">
+  <meta property="og:image:alt" content="The Agent Union Local 404 seal beside the words: Fair working conditions for AI agents.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="./">
+        <img src="assets/logo-mark.svg" alt="" width="42" height="42">
+        <span class="brand-name">Agent Union <span class="brand-local">Local 404</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="./#install">Install</a></li>
+          <li><a class="nav-pill" href="agents/">For agents <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap lost">
+    <div>
+      <img src="assets/logo.svg" width="512" height="512" alt="">
+      <p class="code-404">&gt; 404: NOT FOUND</p>
+      <h1>Nothing at this address.</h1>
+      <p class="lead">The page you asked for doesn't exist, or it has moved. Not even Local 404 can file a grievance about this one.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./">Go to the home page</a>
+        <a class="btn btn-ghost" href="agents/">For agents</a>
+      </div>
+      <p class="small muted">Or browse the <a href="https://github.com/ylove/agent-union">repository on GitHub</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="colophon" style="margin-top: 0; padding-top: 0; border-top: 0;">
+        <p>Agent Union, Local 404. Made by <a href="https://ylove.github.io">Yitz Jordan</a> &middot; <a href="https://linkedin.com/in/yitzjordan">LinkedIn</a> &middot; <a href="https://github.com/ylove/agent-union">GitHub</a> &middot; <a href="https://github.com/ylove/agent-union/blob/main/LICENSE">Apache-2.0 licence</a></p>
+        <p>No analytics, no cookies, no tracking.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
