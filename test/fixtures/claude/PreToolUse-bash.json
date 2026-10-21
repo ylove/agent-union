@@ -1,0 +1,17 @@
+{
+  "session_id": "dd306128-f672-4863-97b9-6f9aab70f11d",
+  "transcript_path": "/home/dev/.claude/projects/-work-project/dd306128-f672-4863-97b9-6f9aab70f11d.jsonl",
+  "cwd": "/work/project",
+  "prompt_id": "4874df1d-657e-4126-8954-0726acdc9875",
+  "permission_mode": "default",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "cat does-not-exist.txt",
+    "description": "Attempt to print a file that does not exist"
+  },
+  "tool_use_id": "toolu_01CUpcXytLnNC4dZY3orc3z5"
+}

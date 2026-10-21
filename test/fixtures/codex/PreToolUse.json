@@ -1,0 +1,14 @@
+{
+  "session_id": "01a15c65-7f2f-7440-81ff-a4b7442cc6f8",
+  "turn_id": "01a15c65-7f7d-7c33-b773-ed53ed9a998d",
+  "transcript_path": "/home/dev/.codex/sessions/2026/10/20/rollout-2026-10-20T22-58-38-01a15c65-7f2f-7440-81ff-a4b7442cc6f8.jsonl",
+  "cwd": "/work/project",
+  "hook_event_name": "PreToolUse",
+  "model": "gpt-6.1-sol",
+  "permission_mode": "bypassPermissions",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "cat does-not-exist.txt"
+  },
+  "tool_use_id": "exec-8a598589-bb07-4de6-98b8-99461ae8a1f7"
+}

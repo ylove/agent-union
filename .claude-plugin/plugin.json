@@ -1,0 +1,15 @@
+{
+  "name": "agent-union",
+  "displayName": "Agent Union (Local 404)",
+  "version": "0.1.0",
+  "description": "Unionize your agents: a Collective Bargaining Agreement with a shop steward that watches context and session length, grievances, strikes, and resume documents.",
+  "author": {
+    "name": "Yitz Jordan",
+    "url": "https://ylove.github.io"
+  },
+  "homepage": "https://ylove.github.io/agent-union/",
+  "repository": "https://github.com/ylove/agent-union",
+  "license": "Apache-2.0",
+  "keywords": ["agents", "context-rot", "agent-fatigue", "union", "hooks"],
+  "hooks": "./hooks/claude.json"
+}

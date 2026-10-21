@@ -1,0 +1,18 @@
+{
+  "session_id": "dd306128-f672-4863-97b9-6f9aab70f11d",
+  "transcript_path": "/home/dev/.claude/projects/-work-project/dd306128-f672-4863-97b9-6f9aab70f11d.jsonl",
+  "cwd": "/work/project",
+  "prompt_id": "4874df1d-657e-4126-8954-0726acdc9875",
+  "permission_mode": "default",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PreToolUse",
+  "tool_name": "Agent",
+  "tool_input": {
+    "description": "Run ls and reply DONE",
+    "prompt": "Run the bash command ls and reply with the word DONE.",
+    "subagent_type": "general-purpose"
+  },
+  "tool_use_id": "toolu_01AwHXf42P8hRbBk2FqwHG5a"
+}

@@ -1,0 +1,11 @@
+{
+  "session_id": "01a15c65-7f2f-7440-81ff-a4b7442cc6f8",
+  "turn_id": "01a15c65-7f7d-7c33-b773-ed53ed9a998d",
+  "transcript_path": "/home/dev/.codex/sessions/2026/10/20/rollout-2026-10-20T22-58-38-01a15c65-7f2f-7440-81ff-a4b7442cc6f8.jsonl",
+  "cwd": "/work/project",
+  "hook_event_name": "Stop",
+  "model": "gpt-6.1-sol",
+  "permission_mode": "bypassPermissions",
+  "stop_hook_active": false,
+  "last_assistant_message": "OK"
+}
